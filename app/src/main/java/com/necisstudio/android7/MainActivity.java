@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.necisstudio.android7.imagekeyboard.ImageKeyboarActivity;
 import com.necisstudio.android7.inputmethod.InputMethodActivity;
 
 import java.util.Arrays;
@@ -42,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), InputMethodActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnImageKey = (Button)findViewById(R.id.btnImageKeyboard);
+        btnImageKey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ImageKeyboarActivity.class);
                 startActivity(intent);
             }
         });

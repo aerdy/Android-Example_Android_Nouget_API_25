@@ -16,20 +16,24 @@
             </intent-filter>
 
             <!--shotcutapp meta-->
-            <meta-data android:name="android.app.shortcuts"
+            <meta-data
+                android:name="android.app.shortcuts"
                 android:resource="@xml/shortcut" />
 
         </activity>
-        <activity android:name=".appshortcut.AppScMain"/>
-        <activity android:name=".inputmethod.InputMethodActivity"/>
+        <activity android:name=".appshortcut.AppScMain" />
+        <activity android:name=".inputmethod.InputMethodActivity" />
+        <activity android:name=".imagekeyboard.ImageKeyboarActivity" />
 
-        <service android:name=".inputmethod.MyInputMethod"
+        <service
+            android:name=".inputmethod.MyInputMethod"
             android:label="@string/inputmethod"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
-            <meta-data android:name="android.view.im"
+            <meta-data
+                android:name="android.view.im"
                 android:resource="@xml/method" />
         </service>
 

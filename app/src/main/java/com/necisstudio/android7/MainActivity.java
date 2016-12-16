@@ -8,6 +8,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import com.necisstudio.android7.inputmethod.InputMethodActivity;
 
 import java.util.Arrays;
 
@@ -32,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
             shortcutManager.setDynamicShortcuts(Arrays.asList(shortcut));
         }
 
-
+        //inputmethodactivity
+        Button btnInputMethod = (Button)findViewById(R.id.btnInputMethod);
+        btnInputMethod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InputMethodActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

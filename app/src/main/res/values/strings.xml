@@ -3,4 +3,5 @@
     <string name="shortlabel">Short Label</string>
     <string name="longlabel">Long Label</string>
     <string name="msgshortcut">Message ShortCut</string>
+    <string name="inputmethod">Input Method</string>
 </resources>

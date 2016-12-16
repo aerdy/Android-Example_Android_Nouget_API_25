@@ -21,6 +21,19 @@
 
         </activity>
         <activity android:name=".appshortcut.AppScMain"/>
+        <activity android:name=".inputmethod.InputMethodActivity"/>
+
+        <service android:name=".inputmethod.MyInputMethod"
+            android:label="@string/inputmethod"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
+
     </application>
 
 </manifest>
